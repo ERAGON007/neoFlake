@@ -8,16 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #<home-manager/nixos>
-      # Home manager
-      # ./home.nix
     ];
-
-  # Enable Flakes
-  #nix.settings.experimental-features = [
-  #  "nix-command"
-  #  "flakes"
-  #  ];
 
   nix = {
     settings = {
@@ -43,7 +34,6 @@
     fira-code-symbols
     mplus-outline-fonts.githubRelease
     dina-font
-    #proggyFonts
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
   ];
   # Flatpak applications can find fonts with this
@@ -95,16 +85,6 @@
       };
     };
   };
-  # Display manager.
-  #services.xserver.displayManager.sddm.enable = true;
-  # Enable the KDE Plasma Desktop Environment.
-  #services.xserver = {
-  #  desktopManager = {
-  #    plasma5 = {
-  #      enable = true;
-  #    };
-  #};
-  #};   
 
   # Configure keymap in X11
   services.xserver = {
@@ -211,11 +191,7 @@
    unzip
    wget
    neocomp # compton fork, compositor for X11
-   #atool
    git
-   #httpie
-   #dotnet-sdk_7
-   #jetbrains.rider
   ];
 
   environment = {
